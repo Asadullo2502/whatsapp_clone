@@ -10,6 +10,7 @@ const Layout = () => {
 
   const AppLayout = useMemo(
     () => (Auth.authenticated ? Dashboard : AuthLayout),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [Auth.authenticated]
   );
 
