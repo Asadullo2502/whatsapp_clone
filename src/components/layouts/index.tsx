@@ -1,6 +1,7 @@
 import { memo, useMemo, lazy, Suspense } from 'react';
 import Auth from 'src/modules/auth/model';
 import useAuthStore from 'src/modules/auth/store';
+import { Loading } from '../ui';
 
 const Dashboard = lazy(() => import('./Dashboard/Dashboard'));
 const AuthLayout = lazy(() => import('./AuthLayout/AuthLayout'));
@@ -15,11 +16,7 @@ const Layout = () => {
   );
 
   return (
-    <Suspense
-      fallback={
-        <div className="flex flex-auto flex-col h-[100vh]">...loading...</div>
-      }
-    >
+    <Suspense fallback={<Loading />}>
       <AppLayout />
     </Suspense>
   );
