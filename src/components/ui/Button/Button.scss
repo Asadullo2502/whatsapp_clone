@@ -1,0 +1,18 @@
+@import "src/assets/styles/index.scss";
+
+.custom__button {
+  padding: 9px 12px;
+  border-radius: 8px;
+  outline: none;
+  background: $main;
+  border: 1px solid $main;
+  transition: all ease 0.5s;
+  @include font(400, 14px, normal, $white);
+  cursor: pointer;
+
+  &:hover {
+    background: transparent;
+    transition: all ease 0.5s;
+    color: $main;
+  }
+}

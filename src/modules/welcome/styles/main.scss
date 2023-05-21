@@ -1,0 +1,28 @@
+@import "src/assets/styles/index.scss";
+
+.welcome {
+  @include flex(center, center);
+  flex-direction: column;
+  min-height: 100%;
+  text-align: center;
+  position: relative;
+  &:after {
+    content: "";
+    @include fixHeight(6px);
+    width: 100%;
+    background: $main;
+    position: absolute;
+    bottom: 0;
+  }
+
+  h2 {
+    @include font(300, 32px, 37px, $primary-title);
+    margin-top: 40px;
+  }
+
+  p {
+    @include font(400, 14px, 20px, $secndary-title);
+    margin-top: 16px;
+  }
+
+}

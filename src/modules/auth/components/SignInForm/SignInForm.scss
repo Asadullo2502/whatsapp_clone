@@ -1,0 +1,14 @@
+@import "src/assets/styles/index.scss";
+.signInForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  h2 {
+    @include font(500, 24px, 150%, $dark);
+  }
+
+  input {
+    width: 100%;
+  }
+}

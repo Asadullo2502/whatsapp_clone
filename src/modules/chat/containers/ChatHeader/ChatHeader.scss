@@ -1,0 +1,23 @@
+@import "src/assets/styles/index.scss";
+
+.chatHeader {
+  @include flex(center, space-between);
+  padding: 10px 16px;
+  background: $secondary;
+
+  &__info {
+    @include flex(center, center);
+    gap: 15px;
+    .info__user--image {
+      svg {
+        width: 40px;
+        height: 40px;
+        fill: $secndary-title;
+      }
+    }
+
+    .info__username {
+      @include font(500, 17px, 21px, $white);
+    }
+  }
+}

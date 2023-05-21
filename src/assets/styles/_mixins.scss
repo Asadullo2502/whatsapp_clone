@@ -1,0 +1,27 @@
+@mixin modalShadow() {
+  box-shadow: 0 17px 50px 0 rgba(11, 20, 26, .19), 0 12px 15px 0 rgba(11, 20, 26, .24);
+  background: white;
+}
+
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font($weight, $size, $height, $color) {
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin fixHeight($h) {
+  min-height: $h;
+  max-height: $h;
+}
+@mixin fixWidth($w) {
+  min-width: $w;
+  max-width: $w;
+}

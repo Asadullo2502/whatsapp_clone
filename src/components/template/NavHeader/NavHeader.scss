@@ -1,0 +1,41 @@
+@import "src/assets/styles/index.scss";
+
+.nav__header {
+  padding: 10px 16px;
+  background: $secondary;
+  @include flex(center, space-between);
+
+  .header__user--image {
+
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: $secndary-title;
+    }
+  }
+
+  &>div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header__create--message {
+    @include flex(center, center);
+    padding: 8px;
+    border-radius: 50%;
+
+    &:hover {
+      background: #2a3942;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $primary-title;
+    }
+
+    cursor: pointer;
+  }
+}

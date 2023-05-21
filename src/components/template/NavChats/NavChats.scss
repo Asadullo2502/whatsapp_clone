@@ -1,0 +1,9 @@
+@import "src/assets/styles/index.scss";
+
+.nav__chats {
+  padding-top: 48px;
+  cursor: pointer;
+  min-height: calc(100vh - 96px);
+  max-height: calc(100vh - 96px);
+  overflow-y: scroll;
+}

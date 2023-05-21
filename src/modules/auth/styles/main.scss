@@ -1,0 +1,15 @@
+@import "src/assets/styles/index.scss";
+
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  &__left {
+    @include flex(center, center);
+  }
+
+  &__right {
+    @include flex(center, center);
+  }
+}

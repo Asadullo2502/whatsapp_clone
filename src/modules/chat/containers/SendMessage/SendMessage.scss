@@ -1,0 +1,66 @@
+@import "src/assets/styles/index.scss";
+
+.sendMessage {
+  background: $secondary;
+  padding: 16px 24px;
+  @include flex(center, space-between);
+
+  textarea {
+    background: #2a3942;
+    border-radius: 8px;
+    @include fixWidth(calc(100% - 50px));
+    padding: 9px 12px;
+    @include font(400, 15px, 20px, $white);
+    font-family: Arial, sans-serif;
+    border: none;
+    outline: none;
+    resize: none;
+  }
+
+  button {
+    outline: none;
+    border: none;
+    background: transparent;
+    @include flex(center, center);
+    cursor: pointer;
+
+    .lds-dual-ring {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .lds-dual-ring:after {
+      content: " ";
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 3px solid $white;
+      border-color: $white transparent $white transparent;
+      animation: lds-dual-ring 1.2s linear infinite;
+    }
+
+    @keyframes lds-dual-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $primary-title;
+    }
+
+    &:disabled {
+      opacity: 0.2;
+    }
+  }
+}

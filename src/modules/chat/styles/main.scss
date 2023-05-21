@@ -1,0 +1,14 @@
+@import "src/assets/styles/index.scss";
+
+.chat {
+  &__nomessage {
+    min-height: 100%;
+    @include flex(center, center);
+    min-height: calc(100vh - 166px);
+    max-height: calc(100vh - 166px);
+
+    .nomessage__text {
+      @include font(400, 14px, normal, $white);
+    }
+  }
+}

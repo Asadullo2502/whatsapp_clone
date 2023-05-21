@@ -1,0 +1,16 @@
+@import "/src/assets/styles/index.scss";
+
+.custom__input {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid $dark;
+  outline: none;
+  font-size: 16px;
+
+  &:focus {
+    outline: 1px solid $main;
+    border-color: $main;
+  }
+
+}

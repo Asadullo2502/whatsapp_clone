@@ -1,0 +1,55 @@
+@import "src/assets/styles/index.scss";
+
+.navCreateChat {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background: $dark;
+  transform: translateX(-100%);
+  transition: all ease 0.3s;
+
+  &.show {
+    transform: translateX(0);
+    transition: all ease 0.3s;
+  }
+
+  &__top {
+    background: $secondary;
+    padding: 0 23px;
+    padding-top: 50px;
+    @include flex(center, inherit);
+
+    gap: 24px;
+
+    span {
+      cursor: pointer;
+      @include fixHeight(59px);
+      @include flex(center, center);
+
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: $primary-title;
+      }
+    }
+
+    h3 {
+      @include font(400, 19px, 100%, $white);
+    }
+  }
+
+  &__form {
+    margin-top: 48px;
+    padding: 0 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    button {
+      width: 100%;
+    }
+  }
+}

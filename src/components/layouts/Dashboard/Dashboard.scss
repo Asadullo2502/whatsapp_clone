@@ -1,0 +1,26 @@
+@import "src/assets/styles/index.scss";
+
+.dashboard {
+  background: $dark;
+  padding: 16px 19px;
+  display: flex;
+  box-sizing: border-box;
+
+  &__left {
+    @include fixHeight(calc(100vh - 32px));
+    @include fixWidth(442px);
+    position: relative;
+    overflow-y: hidden;
+    .left__header {
+      background: $secondary;
+    }
+  }
+
+  &__right {
+    @include fixWidth(calc(100% - 442px));
+    @include fixHeight(calc(100vh - 32px));
+    background: $secondary;
+    border-left: 1px solid rgba(134, 150, 160, 0.15);
+    overflow-y: scroll;
+  }
+}

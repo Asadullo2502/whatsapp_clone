@@ -1,0 +1,49 @@
+@import "src/assets/styles/index.scss";
+
+.authLayout {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 64px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    min-height: 222px;
+    width: 100%;
+    background: $main;
+    z-index: -1;
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    min-height: calc(100% - 222px);
+    max-height: calc(100% - 222px);
+    width: 100%;
+    background: $dark;
+    z-index: -1;
+    bottom: 0;
+  }
+
+  &__header {
+    padding: 28px 0;
+
+    a {
+      @include font(500, 14px, normal, $white);
+      text-decoration: none;
+      text-transform: uppercase;
+      vertical-align: middle;
+      @include flex(center, flex-start);
+      gap: 14px;
+    }
+  }
+
+  &__body {
+    margin-top: 38px;
+    @include modalShadow();
+    min-height: 400px;
+    width: 100%;
+    padding: 60px;
+  }
+}

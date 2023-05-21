@@ -1,0 +1,17 @@
+@import "src/assets/styles/index.scss";
+
+.chatContainer {
+  &__content {
+    background-color: #0b141a;
+    min-height: calc(100vh - 166px);
+    max-height: calc(100vh - 166px);
+    overflow-y: scroll;
+  }
+
+  &__footer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+  }
+
+}
